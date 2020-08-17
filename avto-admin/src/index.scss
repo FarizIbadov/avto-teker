@@ -1,0 +1,81 @@
+@font-face {
+  src: url("./assets/fonts/AvertaDemoPE-Regular.ttf");
+  font-family: Averta_avto;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+input,
+select,
+textarea {
+  display: block;
+
+  border: 1px solid #ccc;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  border-radius: 3px;
+  -webkit-appearance: none;
+  transition: border-color 0.2s;
+
+  &:focus:not(select) {
+    border-color: #333;
+  }
+
+  &::-ms-input-placeholder,
+  &:-ms-input-placeholder,
+  &::placeholder {
+    color: #555;
+  }
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  line-height: normal;
+}
+
+textarea {
+  resize: vertical;
+}
+
+select {
+  color: #707070;
+
+  & > option {
+    color: #333;
+  }
+}
+
+body {
+  font-family: Averta_avto, sans-serif;
+  font-size: 1.6rem;
+  line-height: 1;
+  position: relative;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}

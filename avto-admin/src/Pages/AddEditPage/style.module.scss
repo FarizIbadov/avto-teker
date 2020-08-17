@@ -1,0 +1,11 @@
+.Form {
+  max-width: 25rem;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+
+.Field {
+  &:not(:last-of-type) {
+    margin-bottom: 1rem;
+  }
+}

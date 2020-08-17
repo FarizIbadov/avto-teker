@@ -1,0 +1,29 @@
+.Navigation {
+  padding: 1rem;
+  height: 6rem;
+  background-color: #fb0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &.active {
+    justify-content: space-between;
+  }
+}
+
+.Logo {
+  display: block;
+  height: 5rem;
+  width: 14rem;
+  cursor: default;
+
+  &.active {
+    cursor: pointer;
+  }
+}

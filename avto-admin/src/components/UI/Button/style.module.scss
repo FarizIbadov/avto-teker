@@ -1,0 +1,125 @@
+$primary: #333;
+$secondary: #aaa;
+$danger: #e73f3f;
+
+.Button {
+  border-radius: 3px;
+  border: 1px solid transparent;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &:disabled {
+    transition: none;
+    cursor: default;
+  }
+}
+
+.primary {
+  &.contained {
+    background-color: $primary;
+    color: #fff;
+
+    &:hover {
+      background-color: darken($primary, $amount: 10%);
+    }
+  }
+
+  &.text,
+  &.outlined {
+    color: $primary;
+  }
+
+  &.outlined {
+    border-color: $primary;
+    background-color: #fff;
+
+    &:hover:not(:disabled) {
+      background-color: $primary;
+    }
+  }
+}
+
+.secondary {
+  &.contained {
+    background-color: $secondary;
+    color: #fff;
+  }
+
+  &.text,
+  &.outlined {
+    color: $secondary;
+  }
+
+  &.outlined {
+    border-color: $secondary;
+
+    &:hover:not(:disabled) {
+      background-color: $secondary;
+    }
+  }
+}
+
+.danger {
+  &.contained {
+    background-color: $danger;
+    color: #fff;
+  }
+
+  &.text,
+  &.outlined {
+    color: $danger;
+  }
+
+  &.outlined {
+    border-color: $danger;
+
+    &:hover:not(:disabled) {
+      background-color: $danger;
+    }
+  }
+}
+
+.small {
+  padding: 0.1rem;
+}
+
+.medium {
+  padding: 0.5rem 1rem;
+}
+
+.large {
+  padding: 1rem 2rem;
+}
+
+.Button,
+.contained {
+  &:disabled {
+    background-color: #ccc !important;
+    border-color: #ccc !important;
+    color: #fff;
+  }
+}
+
+.outlined {
+  background-color: #fff;
+  &:disabled {
+    background-color: #fff !important;
+    border-color: #ccc !important;
+    color: #ccc;
+  }
+
+  &:hover:not(:disabled) {
+    color: #fff;
+  }
+}
+
+.text {
+  border: none;
+  background-color: #fff !important;
+
+  &:disabled {
+    color: #ccc;
+    background-color: #fff !important;
+  }
+}

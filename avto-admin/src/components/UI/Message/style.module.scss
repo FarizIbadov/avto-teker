@@ -1,0 +1,26 @@
+.Message {
+  border: 1px solid transparent;
+  border-radius: 3px;
+  opacity: 0;
+  transition: opacity 1s;
+  font-size: 1.5rem;
+  text-align: center;
+
+  &.Error {
+    border-color: #f19292;
+    background-color: #fbe8e8;
+    color: #361818;
+  }
+  &.Success {
+    border-color: #0a740a;
+    background-color: #eefae6;
+    color: #194119;
+  }
+
+  &.Error,
+  &.Success {
+    opacity: 1;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+  }
+}

@@ -1,0 +1,39 @@
+.Nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  top: 6rem;
+  left: 0;
+  padding: 1rem;
+  background-color: #333;
+  transform: translateY(-100%);
+  transition: all 0.1s;
+
+  &.active {
+    transform: translateY(0);
+  }
+}
+
+.NavLink {
+  display: block;
+  color: #eee !important;
+  font-size: 1.8rem;
+
+  &:not(:first-of-type) {
+    margin-top: 1rem;
+  }
+
+  &:hover,
+  &.active,
+  &.Logout {
+    color: #fb0 !important;
+  }
+}
+
+.Logout {
+  font-weight: bold;
+}

@@ -1,0 +1,10 @@
+.ErrorMessage {
+  opacity: 0;
+  transition: all 0.1s;
+  color: #777;
+  font-size: 1.2rem;
+
+  &.active {
+    opacity: 1;
+  }
+}

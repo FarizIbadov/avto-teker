@@ -1,0 +1,28 @@
+.FileUpload {
+  height: 4.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Field {
+  display: none;
+}
+
+.Button {
+  display: block;
+  color: #333;
+  height: 100%;
+  width: 4.5rem;
+  background-color: #fff;
+  cursor: pointer;
+  transition: color 0.3s;
+
+  &.active {
+    color: #0be20b;
+  }
+}
+
+.Image {
+  max-width: 10rem;
+  height: 100%;
+}

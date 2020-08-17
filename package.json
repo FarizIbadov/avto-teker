@@ -1,0 +1,14 @@
+{
+  "name": "avto-react-express",
+  "version": "1.0.0",
+  "description": "Avtoteker",
+  "main": "index.js",
+  "scripts": {
+    "start:dev": "concurrently \"npm start --prefix avto-admin\" \"npm run start:dev --prefix avto-server\""
+  },
+  "author": "Fariz ibadov",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^5.3.0"
+  }
+}

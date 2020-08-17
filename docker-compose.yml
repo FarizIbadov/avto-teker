@@ -1,0 +1,48 @@
+version: "3.8"
+services:
+  server:
+    container_name: server
+    build: ./avto-server
+    restart: unless-stopped
+    ports:
+      - "5000:5000"
+    environment:
+      - MONGO_URL=mongodb://mongo:27017/avto-server
+      - SECRET=a09b172bb2e04ae4811189d4eeda8269
+      - STATUS=production
+    networks:
+      - internal
+    depends_on:
+      - mongo
+
+  client:
+    container_name: client
+    build: ./avto-admin
+    restart: unless-stopped
+    links:
+      - server
+    ports:
+      - "80:80"
+    depends_on:
+      - server
+    networks:
+      - internal
+
+  mongo:
+    container_name: mongo
+    image: "mongo"
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    volumes:
+      - dbdata:/data/db
+      - dbconfig:/data/configdb
+    networks:
+      - internal
+
+networks:
+  internal:
+
+volumes:
+  dbdata: {}
+  dbconfig: {}
