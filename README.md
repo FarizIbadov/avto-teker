@@ -1,2 +1,0 @@
-# avto-teker
-# avto-teker
